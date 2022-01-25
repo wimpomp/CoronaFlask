@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 from flask import Flask, render_template
 from markupsafe import escape
 
@@ -19,12 +17,6 @@ def world():
 
 @app.route('/<place>')
 def cor(place):
+    if place not in Cor.regions:
+        place = 'World'
     return render_template('index.html', place=place, figure=Cor.plot_cases(escape(place)), regions=Cor.regions)
-
-
-def main():
-    app.run()
-
-
-if __name__ == '__main__':
-    main()

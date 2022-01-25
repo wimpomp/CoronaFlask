@@ -6,7 +6,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name='coronaflask',
-    version='2022.1.0',
+    version='2022.1.1',
     author='Wim Pomp',
     author_email='wimpomp@gmail',
     description='Flask for a corona graph plotting website.',
