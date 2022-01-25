@@ -1,0 +1,13 @@
+<!doctype html >
+<html lang="en">
+    <head>
+        <title>{{place}}</title>
+    </head>
+    <body>
+        {{figure|safe}}
+        <br />
+        {% for region in regions %}
+            <a href="{{region}}">{{region}}</a>
+        {% endfor %}
+    </body>
+</html>
