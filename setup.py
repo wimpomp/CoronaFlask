@@ -1,4 +1,3 @@
-import os
 import setuptools
 
 with open('README.md', 'r') as fh:
@@ -6,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name='coronaflask',
-    version='2022.1.1',
+    version='2022.5.0',
     author='Wim Pomp',
     author_email='wimpomp@gmail',
     description='Flask for a corona graph plotting website.',
@@ -21,6 +20,4 @@ setuptools.setup(
     ],
     python_requires='>=3.8',
     install_requires=['waitress', 'flask', 'markupsafe', 'pandas', 'numpy', 'matplotlib', 'requests', 'mpld3'],
-    scripts=[os.path.join('bin', script) for script in
-             os.listdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'bin'))],
 )

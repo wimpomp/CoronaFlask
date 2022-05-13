@@ -9,6 +9,8 @@ import mpld3
 import requests
 import io
 
+pandas.set_option('display.max_rows', 500)
+
 
 class Plots:
     @staticmethod
@@ -111,7 +113,7 @@ class Corona:
         w['Country/Region'] = 'World'
         w['Lat'] = 0
         w['Long'] = 0
-        return p.append(w)
+        return pandas.concat((p, pandas.DataFrame(w).T))
 
     @staticmethod
     def plot_series(fig, ax, dates_number, dates_obj, cum, llabel=None, rlabel=None):
